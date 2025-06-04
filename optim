@@ -1,0 +1,12 @@
+settings put secure long_press_timeout 250 
+settings put secure multi_press_timeout 250 
+settings put global adaptive_battery_management_enabled 0 
+settings put global animator_duration_scale 0.6 
+settings put global transition_animation_scale 0.6 
+settings put global window_animation_scale 0.6 
+settings put global ram_expand_size 0 
+settings put global sem_low_heat_mode 1 
+settings put global enable_back_animation 1 
+settings put system Flashlight_brightness_level 1001 
+settings put secure brightness_on_top 1 
+settings put global google_core_control 0

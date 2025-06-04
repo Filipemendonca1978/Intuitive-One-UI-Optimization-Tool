@@ -1,0 +1,3 @@
+pm compile -a -f -m speed-profile 
+pm compile -a -f compile-layouts 
+pm bg-dexopt-job
