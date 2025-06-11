@@ -1,5 +1,8 @@
-To execute it run 'OneUI Optimizer.bat'.
-It guides you and is easy to use
+
+How to use
+------------------------------------------
+Run "OneUI Optimizer.bat" and follow the guide
+
 ------------------------------------------
 Tested on UI 6 and 7
 ------------------------------------------
