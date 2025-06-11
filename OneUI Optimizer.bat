@@ -66,36 +66,22 @@ cls
 title Detecting device...
 type name
 echo Detecting device automatically...
+
+set "deviceFound=false"
 for /f "tokens=1,2" %%a in ('adb devices ^| findstr /v "List"') do (
-    if "%%b"=="device" goto :opt_choice
-) else (
-echo No device detected. Let's try manually...
-timeout /t 2 >nul
-goto :check_device
+    if "%%b"=="device" (
+        set "deviceFound=true"
+    )
 )
 
-:check_device
-cls
-title Device check (manual)
-type name
-adb devices
-echo Let's check if your device appears here:
-pause
-
-:device_response
-cls
-type name
-set /p d=Did it appear? (Y/N): 
-if /i "%d%"=="Y" (
+if "%deviceFound%"=="true" (
     goto :opt_choice
-) else if /i "%d%"=="N" (
-    echo Please check USB cable and driver installation.
-    pause
-    goto :check_device
 ) else (
-    echo Invalid answer, try again.
-    timeout /t 2 >nul
-    goto :device_response
+    cls
+    type name
+    echo No device detected.
+    echo Please check device cable and driver installation.
+    pause
 )
 
 :opt_choice
@@ -216,3 +202,4 @@ echo Not made for commercial use
 echo Version 1.3
 pause
 exit
+
