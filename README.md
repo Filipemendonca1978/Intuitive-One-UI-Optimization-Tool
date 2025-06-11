@@ -2,11 +2,17 @@
 How to use
 ------------------------------------------
 Go to Settings > About the Device > Software Information
+
 Tap "Build Number" 7 times
+
 Put your screen lock
+
 Go to Settings > Developer Options
+
 Enable USB debugging
+
 Run "OneUI Optimizer.bat" and follow the guide
+
 You're good to go
 
 ------------------------------------------
